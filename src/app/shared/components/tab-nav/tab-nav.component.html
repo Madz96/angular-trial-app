@@ -1,14 +1,15 @@
-<ul class="nav nav-tabs nav-fill">
+<ul class="nav nav-tabs nav-fill mb-2">
   <li class="nav-item">
-    <a class="nav-link" href="#">Summary</a>
+    <a class="nav-link" routerLinkActive="active" routerLink="summary">Summary</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Blockchain Proofs</a>
+    <a class="nav-link" routerLinkActive="active" routerLink="bcproofs">Blockchain Proofs</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">People & Technology</a>
+    <a class="nav-link" routerLinkActive="active" routerLink="peopletech">People & Technology</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Money & Stakes</a>
+    <a class="nav-link" routerLinkActive="active" routerLink="monstakes">Money & Stakes</a>
   </li>
 </ul>
+<router-outlet></router-outlet>
