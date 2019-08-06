@@ -1,7 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
-import { SummaryComponent } from "./features/summary/summary.component";
+import { SummaryMainViewComponent } from "./features/summary/summary-main-view/summary-main-view.component";
+
 import { BlockchainProofsComponent } from "./features/blockchain-proofs/blockchain-proofs.component";
 import { PeopleTechComponent } from "./features/people-tech/people-tech.component";
 import { MoneyStakesComponent } from "./features/money-stakes/money-stakes.component";
@@ -9,7 +10,7 @@ import { MoneyStakesComponent } from "./features/money-stakes/money-stakes.compo
 const navRoutes: Routes = [
   {
     path: "summary",
-    component: SummaryComponent
+    component: SummaryMainViewComponent
   },
   {
     path: "bcproofs",
@@ -30,34 +31,8 @@ const navRoutes: Routes = [
   }
 ];
 
-const summaryRoutes: Routes = [
-  {
-    path: "peoplebtn",
-    redirectTo: "/peopletech",
-    pathMatch: "full"
-  },
-  {
-    path: "databtn",
-    redirectTo: "/peopletech",
-    pathMatch: "full"
-  },
-  {
-    path: "proofbtn",
-    redirectTo: "/bcproofs",
-    pathMatch: "full"
-  },
-  {
-    path: "moneybtn",
-    redirectTo: "/monstakes",
-    pathMatch: "full"
-  }
-];
-
 @NgModule({
-  imports: [
-    RouterModule.forRoot(navRoutes),
-    RouterModule.forRoot(summaryRoutes)
-  ],
+  imports: [RouterModule.forRoot(navRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
