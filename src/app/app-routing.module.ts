@@ -6,7 +6,7 @@ import { BlockchainProofsComponent } from "./features/blockchain-proofs/blockcha
 import { PeopleTechComponent } from "./features/people-tech/people-tech.component";
 import { MoneyStakesComponent } from "./features/money-stakes/money-stakes.component";
 
-const routes: Routes = [
+const navRoutes: Routes = [
   {
     path: "summary",
     component: SummaryComponent
@@ -22,10 +22,42 @@ const routes: Routes = [
   {
     path: "monstakes",
     component: MoneyStakesComponent
+  },
+  {
+    path: "",
+    redirectTo: "summary",
+    pathMatch: "full"
   }
 ];
+
+const summaryRoutes: Routes = [
+  {
+    path: "peoplebtn",
+    redirectTo: "/peopletech",
+    pathMatch: "full"
+  },
+  {
+    path: "databtn",
+    redirectTo: "/peopletech",
+    pathMatch: "full"
+  },
+  {
+    path: "proofbtn",
+    redirectTo: "/bcproofs",
+    pathMatch: "full"
+  },
+  {
+    path: "moneybtn",
+    redirectTo: "/monstakes",
+    pathMatch: "full"
+  }
+];
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(navRoutes),
+    RouterModule.forRoot(summaryRoutes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
