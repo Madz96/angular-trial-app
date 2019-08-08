@@ -1,6 +1,5 @@
 import { RouterModule, Routes } from "@angular/router";
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
 
 const summaryRoutes: Routes = [
   {
@@ -26,7 +25,7 @@ const summaryRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forRoot(summaryRoutes)],
-  declarations: []
+  imports: [RouterModule.forChild(summaryRoutes)],
+  exports: [RouterModule]
 })
 export class SummaryRoutingModule {}

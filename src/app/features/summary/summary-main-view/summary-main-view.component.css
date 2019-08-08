@@ -1,0 +1,19 @@
+.mainBody {
+  margin: 2%;
+}
+
+.column {
+  float: left;
+  width: 48%;
+  margin-right: 2%;
+}
+
+.row {
+  margin-bottom: 2%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

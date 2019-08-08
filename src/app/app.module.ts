@@ -18,7 +18,6 @@ import { SummaryModule } from "./features/summary/summary.module";
     AppComponent,
     MainViewComponent,
     TabNavComponent,
-
     BlockchainProofsComponent,
     PeopleTechComponent,
     MoneyStakesComponent
@@ -26,8 +25,8 @@ import { SummaryModule } from "./features/summary/summary.module";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    SummaryModule
+    SummaryModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
